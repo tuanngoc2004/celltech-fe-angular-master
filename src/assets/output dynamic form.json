@@ -1,0 +1,93 @@
+{
+  "request": "CREATE",
+  "actionId": "57ff895c-f3ed-4ba3-ab37-a85c6f8bcc0a",
+  "tableId": "80568886-1c0e-47d9-8a57-fd63efbbc870",
+  "sessionId": "840bcb6c-5691-4d7c-bbbf-cb0024bb333c",
+  "formId": "57e507f2-065a-47cc-955a-10cf39e67f22",
+  "data": [
+    {
+      "name": "ESTIMATED_TIME",
+      "value": "2"
+    },
+    {
+      "name": "ATTACHMENT",
+      "value": "[]"
+    },
+    {
+      "name": "TASK_CODE",
+      "value": ""
+    },
+    {
+      "name": "TASK_STATUS",
+      "value": "c6537222-afd0-404d-b425-fd917cfa8c5e"
+    },
+    {
+      "name": "WEIGHTED_SCORE",
+      "value": ""
+    },
+    {
+      "name": "PROJECT",
+      "value": "3cafaa85-2134-4634-b4b5-2f5c16afaee0"
+    },
+    {
+      "name": "DESIRED_RESUIT",
+      "value": ""
+    },
+    {
+      "name": "DESCRIPTION",
+      "value": ""
+    },
+    {
+      "name": "PERSON_IN_CHARGE",
+      "value": "4ffeefaf-1cee-45db-8e77-c8ffd969c263"
+    },
+    {
+      "name": "START_DATE",
+      "value": "2024-01-04 00:00:00.00000"
+    },
+    {
+      "name": "NAME",
+      "value": "Cập nhật thêm function format cho submit text value"
+    },
+    {
+      "name": "KPI",
+      "value": "f4b2597f-5429-4f13-aaf8-73b6f43cf08d"
+    },
+    {
+      "name": "DUE_DATE",
+      "value": "2024-01-04 00:00:00.00000"
+    },
+    {
+      "name": "PARENT",
+      "value": ""
+    },
+    {
+      "name": "ACTUAL_TIME",
+      "value": "2"
+    },
+    {
+      "name": "TASK_STATUS_TEXT",
+      "value": "Planning"
+    },
+    {
+      "name": "PROJECT_TEXT",
+      "value": "CRM Vườn An"
+    },
+    {
+      "name": "PERSON_IN_CHARGE_TEXT",
+      "value": "Thái Nguyễn"
+    },
+    {
+      "name": "KPI_TEXT",
+      "value": "Vườn An"
+    },
+    {
+      "name": "PARENT_TEXT",
+      "value": ""
+    },
+    {
+      "name": "ID",
+      "value": "9c8a8ac9-2502-4bca-84a7-16c9ae7b5fbf"
+    }
+  ]
+}

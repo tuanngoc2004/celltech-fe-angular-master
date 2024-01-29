@@ -1,0 +1,22 @@
+<nz-select nzShowSearch
+           nzAllowClear
+           class="w-100"
+           [nzDisabled]="isDisabled"
+           [nzPlaceHolder]="showAllText"
+           (ngModelChange)="onHandleChangeValue($event)"
+           [(ngModel)]="selectedValue ? selectedValue : value">
+  <ng-container [ngSwitch]="mode">
+    <ng-container *ngSwitchCase="'GROUP'">
+      <nz-option-group *ngFor="let group of values" [nzLabel]="group.name">
+        <nz-option *ngFor="let value of (group.values | SortAlphabetPipe : displayField)" [nzLabel]="value[displayField]" [nzValue]="value[valueField]"></nz-option>
+      </nz-option-group>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+      <nz-option *ngFor="let value of (values | SortAlphabetPipe : displayField)" [nzLabel]="value[displayField]" [nzValue]="value[valueField]"></nz-option>
+    </ng-container>
+  </ng-container>
+</nz-select>
+
+
+
+

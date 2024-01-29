@@ -1,0 +1,37 @@
+<form [formGroup]="form" nz-form class="custom-form-layout" *ngIf="data">
+    <p>{{ data.data.settingForm.name }}</p>
+    <div *ngFor="let row of data.data.settingForm.settings.formLayout" nz-row [nzGutter]="24">
+      <div *ngFor="let column of row" nz-col [nzSpan]="24/row.length">
+        <h6>{{ column.caption }}</h6>
+        <ng-container [ngSwitch]="getFormControlType(column)">
+          <app-text *ngSwitchCase="'TEXT'" formControlName="name"></app-text>
+          <app-number-input *ngSwitchCase="'NUMBER'" formControlName="number"></app-number-input>
+          <app-date-input class="full-form" *ngSwitchCase="'DATE_TIME'" formControlName="date"></app-date-input>
+          <celltech-select *ngSwitchCase="'DROPDOWN'" formControlName="drop"></celltech-select>
+          <nz-upload
+            *ngSwitchCase="'FILE'"
+            class="upload-container"
+            [nzBeforeUpload]="beforeUpload"
+            [nzFileList]="fileList"
+            [nzAction]="uploadURL"
+            
+          >
+            <div class="custom-upload">
+              <div class="ant-upload-text" >Click or drag file to this area to upload</div>
+            </div>
+          </nz-upload>
+          <editor apiKey="xhxn0tnvyhv821twpw3vijjai12pfr73b6lo5prhi9m7swd0" *ngSwitchCase="'TEXT_AREA'" formControlName="area"></editor>
+          <celltech-select *ngSwitchCase="'TREE_DROPDOWN'" formControlName="tree_drop"></celltech-select>
+        </ng-container>
+      </div>
+    </div>
+  
+    <div class="button-container" nz-row>
+      <div nz-col *ngFor="let action of data.data.settingActionComponents" [nzSpan]="1">
+        <button nz-button (click)="performAction(action)">
+          <i *ngIf="action.settings && action.settings.icon" class="{{ action.settings.icon }}"></i>
+          {{ action.componentText }}
+        </button>
+      </div>
+    </div>
+  </form>

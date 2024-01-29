@@ -1,0 +1,77 @@
+.custom-form-layout {
+    // ... other styles ...
+  
+    .form-item {
+        margin-bottom: 15px;
+    
+        .form-label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+    
+        input[nz-input], nz-select, nz-date-picker {
+          width: 100%;
+          background-color: #f5f5f5; // Gray background for input
+          border: 1px solid #d9d9d9;
+          padding: 6px 12px;
+          border-radius: 4px;
+    
+          &:focus {
+            border-color: #40a9ff;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          }
+        }
+      }
+    
+      .select-container {
+        display: flex;
+        justify-content: space-between;
+    
+        .select-item {
+          width: 49%; // Adjusted width to fit both selects in one line
+          // Add other necessary styles if needed
+        }
+      }
+
+      .form-item2 {
+        margin-bottom: 15px;
+    
+        .form-label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+    
+        input[nz-input], nz-select, nz-date-picker {
+          width: 100%;
+          background-color: #f5f5f5; // Gray background for input
+          border: 1px solid #d9d9d9;
+          padding: 6px 12px;
+          border-radius: 4px;
+    
+          &:focus {
+            border-color: #40a9ff;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          }
+        }
+      }
+    
+      .select-container2 {
+        display: flex;
+        justify-content: space-between;
+    
+        .select-item {
+          width: 30%; // Adjusted width to fit both selects in one line
+          // Add other necessary styles if needed
+        }
+
+        
+      }
+    
+      button[nz-button] {
+        width: 100%;
+        margin-top: 15px;
+      }
+  }
+  

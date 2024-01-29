@@ -1,0 +1,31 @@
+<form [formGroup]="form" nz-form class="custom-form-layout" *ngIf="data">
+  <div *ngFor="let item of data.data.settingFieldComponents">
+    <ng-container *ngIf="item.settings.form.formElementType === 'TEXT'">
+      <h6>{{ item.caption }}</h6>
+      <!-- <input type="text" [formControlName]="item.code" /> -->
+      <input nz-input id="name" [formControlName]="item.code" />
+    </ng-container>
+    <ng-container *ngIf="item.settings.form.formElementType === 'NUMBER'">
+      <h6>{{ item.caption }}</h6>
+      <!-- <input type="number" [formControlName]="item.code" /> -->
+      <nz-input-number id="name" class="full-width-input" [formControlName]="item.code" />
+    </ng-container>
+    <ng-container *ngIf="item.settings.form.formElementType === 'DATE_TIME'">
+      <h6>{{ item.caption }}</h6>
+      <input type="date" class="form-control date-input" [formControlName]="item.code" />
+    </ng-container>
+    <ng-container *ngIf="item.settings.form.formElementType === 'DROPDOWN'">
+      <h6>{{ item.caption }}</h6>
+      <!-- <input type="datetime" [formControlName]="item.code" /> -->
+      <nz-select class="full-width-input" formControlName="{{ item.componentText }}" [id]="item.componentText" nzPlaceHolder="Please select"></nz-select>
+    </ng-container>
+    <ng-container *ngIf="item.settings.form.formElementType === 'TEXT_AREA'">
+      <h6>{{ item.caption }}</h6>
+      <editor formControlName="editorContent"></editor>
+    </ng-container>
+  </div>
+</form>
+
+
+
+

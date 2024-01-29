@@ -1,0 +1,74 @@
+.form-control.date-input {
+  display: block;
+  width: 100%;
+  padding: 4px 11px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.form-control.date-input:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  outline: 0;
+}
+
+/* Optional: Customize appearance of calendar picker indicator */
+.form-control.date-input::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.form-control.date-input[type="date"]::-moz-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+
+/* create-task3.component.scss */
+
+.button-container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 1px; /* Adjust the gap between buttons */
+}
+
+// upload-file.component.scss
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+// height: 300px; /* Set your desired height */
+}
+
+.custom-upload {
+  border: 2px dashed #d9d9d9;
+  border-radius: 4px;
+  padding: 16px;
+  text-align: center;
+  background-color: #fafafa;
+  cursor: pointer;
+  }
+
+.ant-upload-text {
+  margin-top: 8px;
+  color: #999;
+}
+
+
+
+.full-form {
+  width: 1000px;
+}

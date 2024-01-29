@@ -1,0 +1,30 @@
+<!-- <div *ngIf="data">
+    <h1>{{ data.data.settingForm.name }}</h1>
+  
+    <p>{{ data.data.settingForm.settings.formLayout[0][0].caption }}</p>
+    <p>{{ data.data.settingForm.settings.formLayout[1][0].caption }}</p>
+    <p>{{ data.data.settingForm.settings.formLayout[1][1].caption }}</p>
+    <p>{{ data.data.settingForm.settings.formLayout[2][0].caption }}</p>
+    {{ data.data.settingForm.settings.formLayout[2][1].caption }}
+    <nz-select formControlName="select2" id="select2" nzPlaceHolder="Please select">
+        <nz-option *ngFor="let option of data?.data?.settingForm?.settings?.formLayout[3]" [nzValue]="option.componentText" [nzLabel]="option.componentText"></nz-option>
+      </nz-select>
+    <br>
+    <div *ngFor="let row of data.data.settingForm.settings.formLayout">
+      <div *ngFor="let item of row">
+        <p>{{ item.caption }}: {{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+   -->
+
+
+   <form nz-form class="custom-form-layout" *ngIf="data">
+    <p>{{ data.data.settingForm.name }}</p>
+    <div *ngFor="let row of data.data.settingForm.settings.formLayout" nz-row [nzGutter]="24">
+        <div *ngFor="let column of row" nz-col [nzSpan]="24/row.length">
+            <p>{{ column.caption }}</p>
+            <input nz-input type="text">
+        </div>
+    </div>
+</form>

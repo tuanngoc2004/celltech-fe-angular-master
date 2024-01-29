@@ -1,0 +1,141 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "celltech-fe-angular": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/celltech-fe-angular",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "allowedCommonJsDependencies": [
+              "hammerjs",
+              "seedrandom",
+              "pdfjs-dist/es5/web/pdf_viewer",
+              "pdfjs-dist/es5/build/pdf",
+              "lodash",
+              "jwt-decode",
+              "highcharts",
+              "lodash/throttle",
+              "lodash/pick",
+              "lodash/includes",
+              "lodash/every",
+              "lodash/first",
+              "lodash/isFunction",
+              "lodash/isString",
+              "lodash/isNumber",
+              "lodash/omit",
+              "lodash/get",
+              "lodash/defaultsDeep",
+              "lodash/find",
+              "file-saver",
+              "jspdf-autotable",
+              "jspdf",
+              "xlsx",
+              "typed-function",
+              "decimal.js",
+              "fraction.js",
+              "complex.js",
+              "uuid",
+              "@ant-design/colors",
+              "rxjs/internal/observable/interval"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "celltech-fe-angular:build:production"
+            },
+            "development": {
+              "browserTarget": "celltech-fe-angular:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "celltech-fe-angular:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/tinymce/tinymce.min.js"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "e256db85-1fcb-4d87-abbd-36ddce59e8e9"
+  }
+}

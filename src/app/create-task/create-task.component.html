@@ -1,0 +1,120 @@
+<form nz-form class="custom-form-layout" *ngIf="selectedCaption">
+
+    <!-- <h4>{{ data.data.settingForm.name }}</h4> -->
+    <h4>{{ jsonData?.data?.settingForm?.name }}</h4>
+    <!-- <div *ngFor="let row of data.data.settingForm.settings.formLayout"> -->
+        <!-- <p>{{  }}</p> -->
+      <!-- <div *ngFor="let item of row"> -->
+    <!-- Text Input -->
+    <div class="form-item">
+      <h6 class="form-label">{{ selectedCaption[0].caption }}</h6>
+      <input nz-input formControlName="name" id="name" />
+    </div>
+  
+    
+    <!-- Dropdown Select -->
+    <div class="form-item select-container">
+        <div class="select-item">
+          <h6 class="form-label">{{ selectedCaption[1].caption }}</h6>
+          <nz-select formControlName="select1" id="select1" nzPlaceHolder="Please select">
+            <nz-option *ngFor="let option of jsonData?.data?.settingForm?.settings?.formLayout[1]" [nzValue]="option.componentText" [nzLabel]="option.componentText"></nz-option>
+          </nz-select>
+        </div>
+    
+        <div class="select-item">
+          <h6 class="form-label">{{ selectedCaption[2].caption }}</h6>
+          <nz-select formControlName="select2" id="select2" nzPlaceHolder="Please select">
+            <nz-option *ngFor="let option of jsonData?.data?.settingForm?.settings?.formLayout[2]" [nzValue]="option.componentText" [nzLabel]="option.componentText"></nz-option>
+          </nz-select>
+        </div>
+    </div>
+
+    <div class="form-item select-container">
+        <div class="select-item">
+          <h6 class="form-label">{{ selectedCaption[3].caption }}</h6>
+          <nz-select formControlName="select3" id="select3" nzPlaceHolder="Please select">
+            <nz-option nzValue="option1" nzLabel="Option 1"></nz-option>
+            <nz-option nzValue="option2" nzLabel="Option 2"></nz-option>
+            <!-- Add more options as needed -->
+          </nz-select>
+        </div>
+    
+        <div class="select-item">
+          <h6 class="form-label">{{ selectedCaption[4].caption }}</h6>
+          <nz-select formControlName="select4" id="select4" nzPlaceHolder="Please select">
+            <nz-option nzValue="option1" nzLabel="Option 1"></nz-option>
+            <nz-option nzValue="option2" nzLabel="Option 2"></nz-option>
+            <!-- Add more options as needed -->
+          </nz-select>
+        </div>
+    </div>
+
+    <!-- Date Picker -->
+    <div class="form-item2 select-container2">
+        <div class="select-item">
+            <h6 class="form-label">{{ selectedCaption[5].caption }}</h6>
+            <nz-date-picker formControlName="date1" id="date1"></nz-date-picker>
+        </div>
+    
+        <div class="select-item">
+            <h6 class="form-label">{{ selectedCaption[6].caption }}</h6>
+            <nz-date-picker formControlName="date2" id="date2"></nz-date-picker>
+        </div>
+                
+        <div class="select-item">
+            <h6 class="form-label">{{ selectedCaption[7].caption }}</h6>
+            <nz-select formControlName="select5" id="select5" nzPlaceHolder="Please select">
+            <nz-option nzValue="option1" nzLabel="Option 1"></nz-option>
+            <nz-option nzValue="option2" nzLabel="Option 2"></nz-option>
+            <!-- Add more options as needed -->
+            </nz-select>
+        </div>
+    </div>   
+
+    <div class="form-item2 select-container2">
+        <div class="select-item">
+            <h6 class="form-label">{{ selectedCaption[8].caption }}</h6>
+            <nz-select formControlName="select6" id="select6" nzPlaceHolder="Please select">
+            <nz-option nzValue="option1" nzLabel="Option 1"></nz-option>
+            <nz-option nzValue="option2" nzLabel="Option 2"></nz-option>
+            <!-- Add more options as needed -->
+            </nz-select>
+        </div>
+
+        <div class="select-item">
+            <h6 class="form-label">{{ selectedCaption[9].caption }}</h6>
+            <nz-select formControlName="select7" id="select7" nzPlaceHolder="Please select">
+            <nz-option nzValue="option1" nzLabel="Option 1"></nz-option>
+            <nz-option nzValue="option2" nzLabel="Option 2"></nz-option>
+            <!-- Add more options as needed -->
+            </nz-select>
+        </div>
+                
+        <div class="select-item">
+            <h6 class="form-label">{{ selectedCaption[10].caption }}</h6>
+            <nz-select formControlName="select8" id="select8" nzPlaceHolder="Please select">
+            <nz-option nzValue="option1" nzLabel="Option 1"></nz-option>
+            <nz-option nzValue="option2" nzLabel="Option 2"></nz-option>
+            <!-- Add more options as needed -->
+            </nz-select>
+        </div>
+    </div>
+    
+    <div class="form-item">
+        <h6 class="form-label">{{ selectedCaption[11].caption }}</h6>
+        <editor formControlName="editorContent"></editor>
+      </div>
+      
+      <div class="form-item">
+        <h6 class="form-label">{{ selectedCaption[12].caption }}</h6>
+        <editor formControlName="editorContent"></editor>
+      </div>
+    
+  
+    <!-- Submit Button -->
+    <div class="form-item">
+      <button nz-button nzType="primary">Submit</button>
+    </div>
+  <!-- </div>
+</div> -->
+</form>
